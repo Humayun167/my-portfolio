@@ -5,6 +5,7 @@ import Contact from './Components/Contact/Contect'
 import Footer from './Components/Footer/Footer'
 import Header from './Components/Header/Header'
 import Home from './Components/Home/Home'
+import Portfolio from './Components/Portfolio/Portfolio'
 import Qualification from './Components/Qualification/Qualification'
 import Services from './Components/Services/Services'
 import Skills from './Components/Skills/Skills'
@@ -21,7 +22,7 @@ function App() {
         <Skills></Skills>
         <Services></Services>
         <Qualification></Qualification>
-
+        <Portfolio></Portfolio>
         {/* <Work></Work> */}
         <Contact></Contact>
       </main>

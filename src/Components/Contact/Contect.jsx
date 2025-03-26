@@ -29,7 +29,7 @@ const Contact = () => {
               humayun.webdev@gmail.com              </span>
 
               <a
-                href="Mailto:humayun.webdev@gmail.com"
+                href="Mailto:humayunrashidkhan96@gmail.com"
                 className="contact__button"
               >
                 Write me
@@ -52,7 +52,7 @@ const Contact = () => {
               <i className="bx bxl-linkedin contact__card-icon"></i>
 
               <h3 className="contact__card-title">LinkedIn</h3>
-              <span className="contact__card-data">LinkedIn</span>
+              <span className="contact__card-data">humayun96</span>
 
               <a
                 href="https://linkedin.com/in/humayun96"

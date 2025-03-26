@@ -1,34 +1,25 @@
 import './Qualification.css';
 
-const qualifications = [
-    {
-        id: 1,
-        degree: 'Bachelor of Science in Computer Science',
-        institution: 'University of Example',
-        year: '2015 - 2019',
-    },
-    {
-        id: 2,
-        degree: 'Master of Science in Software Engineering',
-        institution: 'Example Institute of Technology',
-        year: '2019 - 2021',
-    },
-];
-
 const Qualification = () => {
     return (
-        <section className="qualification-section">
-            <h2>Qualifications</h2>
-            <div className="qualification-list">
-                {qualifications.map((qualification) => (
-                    <div key={qualification.id} className="qualification-item">
-                        <h3>{qualification.degree}</h3>
-                        <p>{qualification.institution}</p>
-                        <span>{qualification.year}</span>
-                    </div>
-                ))}
+        <div className="qualification">
+            <h2>Qualification</h2>
+            <div className="qualification-item">
+                <h3>Secondary School Certificate</h3>
+                <p>2017</p>
+                <p>Darussunnat Kamil Madrasah, Habiganj</p>
             </div>
-        </section>
+            <div className="qualification-item">
+                <h3>Secondary School Certificate</h3>
+                <p>2019</p>
+                <p>BAF Shaheen College, Shamshernagar</p>
+            </div>
+            <div className="qualification-item">
+                <h3>B.Sc in Computer Science & Technology</h3>
+                <p>2022-Present</p>
+                <p>Daffodil International University</p>
+            </div>
+        </div>
     );
 };
 
