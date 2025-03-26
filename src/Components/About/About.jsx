@@ -1,6 +1,6 @@
 import './About.css'
 import AboutImg from '../../assets/profile.jpg'
-import CV from '../../assets/Humayun_Resume.pdf'
+import CV from '../../assets/Humayun-Resume.pdf'
 import Info from './Info';
 
 
