@@ -1,16 +1,34 @@
-import './Qualification.css'
+import './Qualification.css';
+
+const qualifications = [
+    {
+        id: 1,
+        degree: 'Bachelor of Science in Computer Science',
+        institution: 'University of Example',
+        year: '2015 - 2019',
+    },
+    {
+        id: 2,
+        degree: 'Master of Science in Software Engineering',
+        institution: 'Example Institute of Technology',
+        year: '2019 - 2021',
+    },
+];
+
 const Qualification = () => {
     return (
-       <section className="qualification section">
-          <h2 className="section__title">Qualification </h2>
-      <span className="section__subtitle">My Personal Journey</span>
-
-      <div className="qualification__container container">
-        <div className="qualification__tabs">
-            <div className="qualification__button button--flex"></div>
-        </div>
-      </div>
-       </section>
+        <section className="qualification-section">
+            <h2>Qualifications</h2>
+            <div className="qualification-list">
+                {qualifications.map((qualification) => (
+                    <div key={qualification.id} className="qualification-item">
+                        <h3>{qualification.degree}</h3>
+                        <p>{qualification.institution}</p>
+                        <span>{qualification.year}</span>
+                    </div>
+                ))}
+            </div>
+        </section>
     );
 };
 

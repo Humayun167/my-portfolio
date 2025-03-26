@@ -1,0 +1,41 @@
+.qualification-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.qualification-title {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.qualification-list {
+    list-style: none;
+    padding: 0;
+}
+
+.qualification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.qualification-item:last-child {
+    border-bottom: none;
+}
+
+.qualification-item .qualification-name {
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.qualification-item .qualification-date {
+    font-size: 1em;
+    color: #888;
+}
