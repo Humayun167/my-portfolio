@@ -33,15 +33,19 @@ const Portfolio = () => {
     ];
 
     return (
-        <section className="portfolio " id="portfolio">
+        <section className="portfolio" id="portfolio">
             <h2>My Portfolio</h2>
             <div className="portfolio-items">
                 {projects.map((project, index) => (
                     <div key={index} className="portfolio-item card">
                         <img src={project.image} alt={project.title} className="portfolio-image" />
                         <h3>{project.title}</h3>
-                        <p>{project.description}</p>
-                        <a href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>
+                        <p style={{
+            textAlign: 'justify',
+            fontSize: '0.8rem',
+            lineHeight: '1.7'
+          }}>{project.description}</p>
+                        <a href={project.LIVE} target="_blank" rel="noopener noreferrer">View Project</a>
                         <a href={project.github} target="_blank" rel="noopener noreferrer">View on GitHub</a>
                     </div>
                 ))}
