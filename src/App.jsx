@@ -1,8 +1,9 @@
 import './App.css'
+import './theme.css'
 import About from './Components/About/About'
 import Contact from './Components/Contact/Contect'
-
 import Footer from './Components/Footer/Footer'
+import { ThemeProvider } from './context/ThemeContext'
 import Header from './Components/Header/Header'
 import Home from './Components/Home/Home'
 import Portfolio from './Components/Portfolio/Portfolio'
@@ -14,7 +15,7 @@ import Skills from './Components/Skills/Skills'
 function App() {
   
   return (
-    <>
+    <ThemeProvider>
       <Header></Header>
       <main>
         <Home></Home>
@@ -27,7 +28,7 @@ function App() {
         <Contact></Contact>
       </main>
       <Footer></Footer>
-    </>
+    </ThemeProvider>
   )
 }
 
