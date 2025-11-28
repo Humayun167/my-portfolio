@@ -27,7 +27,7 @@ const About = () => {
           Creative, analytical, detail-oriented, and passionate about AI
         </p>
          
-         <a download="" href={CV} className="button button--flex">Download CV
+         <a download="" href="https://drive.google.com/uc?export=download&id=1SOAJUN9FIkfufzb01F45SgHYb58lYLYH" className="button button--flex">Download CV
          <svg
           className="button__icon"
           xmlns="http://www.w3.org/2000/svg"
