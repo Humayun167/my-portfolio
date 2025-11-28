@@ -1,5 +1,17 @@
+import { useState, useEffect } from 'react';
 
 const Data = () => {
+    const [textIndex, setTextIndex] = useState(0);
+    const texts = ['Web Developer', 'Web Designer'];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+        }, 4000); // Change text every 4 seconds
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <div className="home__data">
         <h1 className="home__title">Humayun
@@ -53,7 +65,7 @@ const Data = () => {
               ></path>
         </svg></h1>
       
-        <h3 className="home__subtitle">Web Developer</h3>
+        <h3 className="home__subtitle" key={textIndex}>{texts[textIndex]}</h3>
         <p className="home__description">I am a web developer and I am very passionate and dedicated to my work</p>
          <a href="#contact" className="button button--flex"> 
          say Hello

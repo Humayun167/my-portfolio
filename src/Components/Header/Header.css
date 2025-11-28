@@ -14,8 +14,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap:1rem;
+    column-gap: 2rem;
 }
+
 .nav__logo,
 .nav__toggle
 {
@@ -23,18 +24,25 @@
    font-weight: var(--font-medium);
 }
 
+.nav__logo {
+    flex: 0 0 auto;
+}
+
+.nav__logo:hover {
+    color: var(--title-color-dark);
+}
+
+.nav__menu {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
 .nav__list {
     display: flex;
     column-gap: 2rem;
     align-items: center;
 } 
-
-/* Theme toggle switch specific styles */
-.nav__item .switch {
-    margin: 0;
-    padding: 0;
-    transform: scale(0.8);
-}
 
 .nav__link
 {
@@ -45,6 +53,23 @@
     color: var(--title-color);
     font-weight: var(--font-medium);
     transition: .3s;
+}
+
+.nav__toggle {
+    flex: 0 0 auto;
+}
+
+.nav__actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex: 0 0 auto;
+}
+
+.nav__actions .switch {
+    margin: 0;
+    padding: 0;
+    transform: scale(0.8);
 }
 
 .nav__icon,
@@ -69,11 +94,27 @@
   .header{
     top: initial;
     bottom: 0;
-
   }
+  
   .nav{
     height: var(--header-height);
   }
+  
+  .nav__actions {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: calc(var(--z-fixed) + 1);
+    background-color: var(--body-color);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    gap: 1rem;
+  }
+  
+  .nav__actions .switch {
+    transform: scale(0.6);
+  }
+  
   .nav__menu{
     position: fixed;
     bottom: -100%;
@@ -92,8 +133,9 @@
   }
   .nav__list{
     display: grid;
-    grid-template-columns: repeat(3, 1fr) ;
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    row-gap: 2rem;
   }
 
   .nav__icon{
@@ -127,10 +169,18 @@
 /* For small devices */
 @media screen and (max-width: 350px) {
     .nav__menu{
-        padding: 2rem 0.25rem 4rem;
+        padding: 2rem 0.5rem 4rem;
     }
     .nav__list{
-        column-gap :0;
+        gap: 1rem;
+        row-gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .nav__link{
+        font-size: 0.75rem;
+    }
+    .nav__icon{
+        font-size: 1rem;
     }
 }
 

@@ -21,6 +21,7 @@
     display: grid ;
     grid-template-columns: max-content;
     row-gap: 1rem;
+    animation: slideInLeft 1s ease-out;
     /* margin-left: 50px; */
 }
 .home__social-icon
@@ -36,12 +37,15 @@
 {
     font-size: var(--big-font-size);
     margin-bottom: var(--mb-0-25);
+    animation: fadeInUp 1s ease-out;
 }
 
 .home__hand{
      width: 38px;
      height: 38px;
      margin-left: 0.4rem;
+     display: inline-block;
+     animation: wave 2s ease-in-out infinite;
 }
 
 .home__subtitle
@@ -51,6 +55,11 @@
     padding-left: 5.4rem;
     font-weight:var(--font-normal);
     margin-bottom: var(--mb-1);
+    overflow: hidden;
+    border-right: 2px solid var(--title-color);
+    white-space: nowrap;
+    animation: typing 3s steps(30, end) 0.5s forwards, blink 0.75s step-end infinite;
+    width: 0;
 }
 
 .home__subtitle::before{
@@ -66,6 +75,13 @@
 {
     max-width: 100%;
     margin-bottom: var(--mb-3);
+}
+
+.home__description
+{
+    max-width: 100%;
+    margin-bottom: var(--mb-3);
+    animation: fadeIn 1.5s ease-out 1s both;
 }
 
 .home__img{
@@ -239,4 +255,93 @@
     .home__title {
         font-size: var(--h1-font-size);
     }
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--title-color);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    10%, 30% {
+        transform: rotate(14deg);
+    }
+    20%, 40% {
+        transform: rotate(-8deg);
+    }
+    50% {
+        transform: rotate(14deg);
+    }
+    60% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.button {
+    animation: bounceIn 1s ease-out 1.5s both;
 }
