@@ -10,12 +10,14 @@ import Portfolio from './Components/Portfolio/Portfolio'
 import Qualification from './Components/Qualification/Qualification'
 import Services from './Components/Services/Services'
 import Skills from './Components/Skills/Skills'
+import CursorAnimation from './Components/CursorAnimation/CursorAnimation'
 // import Work from './Components/Work/Work'
 
 function App() {
   
   return (
     <ThemeProvider>
+      <CursorAnimation />
       <Header></Header>
       <main>
         <Home></Home>
