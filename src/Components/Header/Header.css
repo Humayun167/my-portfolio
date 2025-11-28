@@ -98,9 +98,25 @@
   
   .nav{
     height: var(--header-height);
+    padding: 0 1rem;
+  }
+  
+  .nav__logo {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: calc(var(--z-fixed) + 1);
+    background-color: var(--body-color);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
   }
   
   .nav__actions {
+    position: static;
+    gap: 1rem;
+  }
+  
+  .nav__actions .switch {
     position: fixed;
     top: 1rem;
     right: 1rem;
@@ -108,11 +124,17 @@
     background-color: var(--body-color);
     padding: 0.5rem;
     border-radius: 0.5rem;
-    gap: 1rem;
+    transform: scale(0.6);
   }
   
-  .nav__actions .switch {
-    transform: scale(0.6);
+  .nav__toggle {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: calc(var(--z-fixed) + 1);
+    background-color: var(--body-color);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
   }
   
   .nav__menu{
@@ -148,6 +170,7 @@
     font-size: 1.5rem;
     cursor: pointer;
     color: var(--title-color);
+    z-index: calc(var(--z-fixed) + 2);
   }
   .nav__close:hover{
     color: var(--title-color-dark);

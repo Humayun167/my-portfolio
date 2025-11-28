@@ -73,7 +73,11 @@ const Header = () => {
                        </label>
    
                        <div className="nav__toggle" onClick={()=> showMenu(!Toggle)}>
-                           <i className="uil uil-apps"></i>
+                           {Toggle ? (
+                               <i className="uil uil-times"></i>
+                           ) : (
+                               <i className="uil uil-apps"></i>
+                           )}
                        </div>
                    </div>
                </nav>
