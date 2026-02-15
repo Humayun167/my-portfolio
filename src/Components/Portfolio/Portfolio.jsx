@@ -1,16 +1,16 @@
 import './Portfolio.css';
 
-import image1 from '../../assets/swiftcart.png'
+import image1 from '../../assets/greennest.png'
 import image2 from '../../assets/employnix.png'
 import image3 from '../../assets/hellofoodie.png'
 
 const Portfolio = () => {
     const projects = [
         {
-            title: 'Swift Cart',
-            description: 'Designed and developed a responsive e-commerce platform with user authentication and secure payment processing. ',
-            LIVE: 'https://swift-cart-7cxz.vercel.app/',
-            github: 'https://github.com/Humayun167/SwiftCart',
+            title: 'GreenNest',
+            description: 'An eco-friendly e-commerce platform with integrated social features for organic products and sustainable living. ',
+            LIVE: 'https://green-nest-frontend.vercel.app/',
+            github: 'https://github.com/Humayun167/green_nest',
             image: image1,
         },
         {
