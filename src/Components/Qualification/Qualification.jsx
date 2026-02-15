@@ -45,7 +45,7 @@ const Qualification = () => {
                                     Daffodil International University
                                 </span>
                                 <div className="qualification__calendar">
-                                    <i className="uil uil-calendar-alt"></i> 2022 - Present
+                                    <i className="uil uil-calendar-alt"></i> 2022 - 2025
                                 </div>
                             </div>
 
