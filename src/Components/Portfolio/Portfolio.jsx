@@ -1,6 +1,6 @@
 import './Portfolio.css';
 
-import image1 from '../../assets/greennest.png'
+import image1 from '../../assets/greenNest.png'
 import image2 from '../../assets/employnix.png'
 import image3 from '../../assets/hellofoodie.png'
 
