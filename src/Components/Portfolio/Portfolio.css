@@ -65,6 +65,53 @@
     color: var(--container-color);
 }
 
+.portfolio-actions {
+    margin-bottom: 15px;
+}
+
+.portfolio-btn {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 1em;
+    color: var(--container-color);
+    background-color: var(--title-color);
+    border: 2px solid var(--title-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.portfolio-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-btn:active {
+    transform: translateY(0);
+}
+
+.details-btn {
+    background-color: var(--title-color);
+    color: var(--container-color);
+}
+
+.details-btn:hover {
+    opacity: 0.9;
+}
+
+.portfolio-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.portfolio-links a {
+    flex: 1;
+    padding: 8px 12px;
+    font-size: 0.9em;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .portfolio-item {
